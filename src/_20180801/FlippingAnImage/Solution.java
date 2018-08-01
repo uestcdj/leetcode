@@ -19,7 +19,7 @@ public class Solution {
 		int A[][] = {{1, 1, 0}, {1, 0, 1}, {0, 0, 0}};
 //		int A[][] = {{1, 1, 0, 0}, {1, 0, 0, 1}, {0, 1, 1, 1}, {1, 0, 1, 0}};
 		int[][] B = flipAndInvertImage(A);
-		System.out.println();
+		System.out.println(B);
 	}
 
 }

@@ -15,10 +15,5 @@ public class Solution {
     }
 	
 	public static void main(String[] args) {
-//		int A[][] = {{1, 1, 0}, {1, 0, 1}, {0, 0, 0}};
-//		int A[][] = {{1, 1, 0, 0}, {1, 0, 0, 1}, {0, 1, 1, 1}, {1, 0, 1, 0}};
-		int A[][] = {{1, 2, 3}, {4, 5, 6}};
-		int[][] B = transpose(A);
-		System.out.println();
 	}
 }

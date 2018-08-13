@@ -1,37 +1,26 @@
 package _201808._08.MaximumDepthOfN_aryTree;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Solution {
 	
-	static class Node {
-	    public int val;
-	    public List<Node> children;
-
-	    public Node() {}
-
-	    public Node(int _val,List<Node> _children) {
-	        val = _val;
-	        children = _children;
-	    }
-	};
-	
 	static public int maxDepth(Node root) {
         if(root.children == null) {
         	return 1;
         }
         Node p = root;
-        List<Node> list = new LinkedList<Node>();
+        List<Node> list = new ArrayList<Node>();
         list.add(p);
-        list.add(new Node(1,null));
         Iterator<Node> i = list.iterator();
         int high = 1;
         int sum = 1;
         while(i.hasNext()) {
-        	if(i.next().children != null &&(!i.next().children.isEmpty())) {
-        		list.addAll(i.next().children);
+        	List<Node> tmp = i.next().children;
+        	if(tmp != null &&(!tmp.isEmpty())) {
+        		list.addAll(tmp);
         	}
         	list.remove(0);
         	sum++;
